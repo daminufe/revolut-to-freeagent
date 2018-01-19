@@ -1,0 +1,23 @@
+{
+  "name": "@givesmart/revolut-to-freeagent",
+  "version": "1.0.0",
+  "description": "Script to convert Revolut Business CSV to FreeAgent CSV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daminufe/revolut-to-freeagent.git"
+  },
+  "author": "David Ferreira <david.ferreira@givesmart.com> (http://www.givesmart.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daminufe/revolut-to-freeagent/issues"
+  },
+  "homepage": "https://github.com/daminufe/revolut-to-freeagent#readme",
+  "dependencies": {
+    "csv-to-json": "^0.1.2",
+    "moment": "^2.20.1"
+  }
+}
