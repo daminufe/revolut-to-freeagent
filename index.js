@@ -17,7 +17,9 @@ parse({filename}, (err, json) => {
         }
 
         result += `${transaction.Description} (${transaction['Orig currency']})`;
-        result = result.replace(',', '-');
+        result = result.replace(/,/g, '-');
+        result = result.replace(/"/g, '');
+        result = result.replace(/'/g, '');
         return result;
     };
 
@@ -27,7 +29,7 @@ parse({filename}, (err, json) => {
         if (transaction.Amount) {
             const obj = {
                 date: moment(transaction.Date).format('DD/MM/YYYY'),
-                amount: transaction.Amount,
+                amount: Number(transaction.Amount),
                 description: formatDescription(transaction)
             };
 
